@@ -248,7 +248,7 @@ const Projects = () => {
             id="js" role="tabpanel" aria-labelledby="js">
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  mr-5 mt-5 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/HMDB.png"/>
+                            <img  className="rounded-xl" src="../Images/hmdb.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>HMDB</h3>
                             <a target="_blank" href="https://husseinalaa15.github.io/HMDB/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
