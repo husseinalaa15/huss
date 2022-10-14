@@ -25,7 +25,7 @@ const Navbar = () => {
               <img
                 alt="Workflow"
                 className="h-12 w-12 bg-primary rounded-3xl p-2 border-2 border-text-secondary"
-                src="../images/hussein.png"
+                src="./images/hussein.png"
               />
             </a>
             <div className="-mr-2 flex items-center md:hidden">
