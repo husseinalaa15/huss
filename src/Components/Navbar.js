@@ -24,7 +24,7 @@ const Navbar = () => {
               <span className="sr-only">Workflow</span>
               <img
                 alt="Workflow"
-                className="h-14 w-14 bg-primary rounded-3xl p-2 border-2 border-text-secondary"
+                className="h-12 w-12 bg-primary rounded-3xl p-2 border-2 border-text-secondary"
                 src="../images/hussein.png"
               />
             </a>
