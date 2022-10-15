@@ -22,7 +22,7 @@ const Skills = () => {
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
-                <img src="../JS.png" className='w-10 pb-1' alt='Javascript'/>
+                <img src="../js.png" className='w-10 pb-1' alt='Javascript'/>
                 <h3 className='text-sm font-bold text-text-primary'>JavaScript</h3>
 
               </div>
