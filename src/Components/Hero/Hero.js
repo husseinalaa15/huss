@@ -25,7 +25,10 @@ export default function Example() {
                 <span className="block text-text-secondary xl:inline  ">Hussein Alaa</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-              Front-end developer aiming to be a fullstack developer Interested in the entire frontend spectrum and working on ambitious projects with positive people.
+              I am a Frontend Web Developer , I have Industry experience in building web applications and websites, I had worked on many different E-Commerce projects as well as fintech applications.
+I have a great passion about web development, which reflects on my commitment and quality.
+Do not hesitate to hire me.
+
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center  lg:justify-start">
                 <div className="rounded-md shadow z-20">
