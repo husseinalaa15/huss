@@ -16,7 +16,6 @@ const navigation = [
   ]
 const Navbar = () => {
   const {lightMode,toggleMode} = useContext(Mode);
-  console.log(lightMode)
   return (
     <Popover>
     <div className="w-full z-10 fixed pt-6 pb-6 px-4 sm:px-6 lg:px-8">

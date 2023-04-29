@@ -23,7 +23,7 @@ module.exports = {
       pink: colors.fuchsia,
       'primary':'#161b22',
       'secondary':'#111419',
-      'secondaryLight':"#FAF8F1",
+      'secondaryLight':"#f9f7f0cc",
       'text-primary':'#c9d1d9',
       'text-secondary':'#6B4B24',
       'text-darkmode':'#2a5187',
