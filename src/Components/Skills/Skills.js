@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Mode } from '../contextApi/ThemeMode';
 
 const Skills = () => {
+  const {lightMode} = useContext(Mode);
+
   return (
 
-    <div className="relative overflow-hidden flex  justify-center text-center min-h-screen  flex-col bg-secondary "   id="skills">
+    <div className={`relative overflow-hidden flex  justify-center text-center min-h-screen  flex-col ${lightMode ? 'bg-secondaryLight' : 'bg-secondary'}  `} id="skills">
       <h1 className='text-4xl font-bold tracking-widest xs:mt-20 md:mt-10 text-text-primary'> Skills </h1>
         <div className='flex  xs:flex-col md:flex-row  mt-24'>
           
-          <div className='card    xs:my-5 xs:mx-5 md:w-4/12 lg:mx-12 bg-primary  '>
-            <h5 className='text-2xl text-text-primary border-b-2 border-text-secondary pb-3 mb-5'>
+          <div className={`card    xs:my-5 xs:mx-5 md:w-4/12 lg:mx-12 ${lightMode ? ' bg-white' : ' bg-primary'}  `}>
+            <h5 className={`text-2xl ${lightMode ? ' text-text-secondary ' : ' text-text-primary '} border-b-2 border-text-secondary pb-3 mb-5`}>
               Front End Skills 
             </h5>
             <div className='flex flex-wrap justify-center'>
@@ -64,8 +67,8 @@ const Skills = () => {
               
             </div>
           </div>
-          <div className='card   xs:my-5 xs:mx-5 md:w-4/12 lg:mx-12 bg-primary'>
-            <h5 className='text-2xl border-b-2 border-text-secondary pb-3 mb-5 text-text-primary'>
+          <div className={`card    xs:my-5 xs:mx-5 md:w-4/12 lg:mx-12 ${lightMode ? ' bg-white' : ' bg-primary'}  `}>
+          <h5 className={`text-2xl ${lightMode ? ' text-text-secondary ' : ' text-text-primary '} border-b-2 border-text-secondary pb-3 mb-5`}>
               Back End Skills 
             </h5>
             <div className='flex flex-wrap justify-center'>
@@ -102,8 +105,8 @@ const Skills = () => {
               
             </div>
           </div>
-          <div className='card xs:my-5 xs:mx-5 md:w-4/12 lg:mx-12 bg-primary'>
-            <h5 className='text-2xl border-b-2 text-text-primary border-text-secondary mb-5 pb-3'>
+          <div className={`card    xs:my-5 xs:mx-5 md:w-4/12 lg:mx-12 ${lightMode ? ' bg-white' : ' bg-primary'}  `}>
+          <h5 className={`text-2xl ${lightMode ? ' text-text-secondary ' : ' text-text-primary '} border-b-2 border-text-secondary pb-3 mb-5`}>
               Besides 
             </h5>
             <div className='flex flex-wrap justify-center'>

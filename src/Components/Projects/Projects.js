@@ -1,16 +1,18 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
+import { Mode } from '../contextApi/ThemeMode';
 
 const Projects = () => {
 
     const [toggleTabs,setToggleTabs] = useState(0)
+    const {lightMode} = useContext(Mode);
 
   return (
 
-    <div className="relative overflow-hidden flex  justify-center text-center min-h-screen flex-col bg-primary"   id="projects">
+    <div className={`relative overflow-hidden flex  justify-center text-center min-h-screen flex-col  ${lightMode ? 'light-color' : ' bg-primary'}`}   id="projects">
       <h1 className='text-4xl font-bold tracking-widest text-text-primary mt-10'> Projects </h1>
 
       <div class="  mb-4 z-10">
-        <ul class="flex flex-wrap -mb-px justify-center mt-9" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+        <ul class="flex flex-wrap -mb-px justify-center mt-9   " id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
             <li class={`mr-2 `} role="presentation">
                 <button  onClick={()=>{setToggleTabs(0)}} 
                 class={
@@ -146,12 +148,12 @@ const Projects = () => {
             </li>
         </ul>
     </div>
-    <div className='mt-5' id="myTabContent">
+    <div className='mt-5 lg:p-[50px]' id="myTabContent">
             <div 
             class={` flex justify-center   p-4 rounded-lg  flex-wrap ${toggleTabs == 0 ? "bg-dark" : "hidden"}`}   
             id="mern" role="tabpanel" aria-labelledby="mern">
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-2 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/mern.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>E-Bookalypse</h3>
@@ -168,7 +170,7 @@ const Projects = () => {
             class={` flex justify-center flex-wrap  p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 1 ? "bg-dark" : "hidden"}`}   
             id="react" role="tabpanel" aria-labelledby="react">
                   <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-2 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/mern.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>E-Bookalypse</h3>
@@ -177,7 +179,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-2 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/moviesclub.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Movies Club</h3>
@@ -186,7 +188,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-2 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/portfolio22.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Portfolio </h3>
@@ -195,7 +197,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full z-20">
-                    <div className='card  mr-5 mt-2 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/todoreact.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Todos</h3>
@@ -209,7 +211,7 @@ const Projects = () => {
             class={` flex justify-center flex-wrap  p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 2 ? "bg-dark" : "hidden"}`}   
             id="nodejs" role="tabpanel" aria-labelledby="nodejs">
                   <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-2 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/mern.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>E-Bookalypse</h3>
@@ -218,7 +220,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-2 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/chatapp.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Chat App</h3>
@@ -233,7 +235,7 @@ const Projects = () => {
             class={` flex justify-center  p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 3 ? "bg-dark" : "hidden"}`}   
             id="angular" role="tabpanel" aria-labelledby="angular">
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-2 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/ourblog.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>E-Bookalypse</h3>
@@ -247,7 +249,7 @@ const Projects = () => {
             class={` flex justify-center  flex-wrap p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 4 ? "bg-dark" : "hidden"}`}   
             id="js" role="tabpanel" aria-labelledby="js">
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-5 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/hmdb.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>HMDB</h3>
@@ -256,7 +258,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-5 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/todos.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Todos</h3>
@@ -265,7 +267,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-5 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/weather.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Weather App</h3>
@@ -274,7 +276,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-5 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/github.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Github Users</h3>
@@ -288,7 +290,7 @@ const Projects = () => {
             class={` flex justify-center flex-wrap p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 5 ? "bg-dark" : "hidden"}`}   
             id="htmlcss" role="tabpanel" aria-labelledby="htmlcss">
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-5 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/luxestate.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Luxestate</h3>
@@ -297,7 +299,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-5 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/htmlcss.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Untitled</h3>
@@ -306,7 +308,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full z-10">
-                    <div className='card  mr-5 mt-5 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/responsivehtmlcss.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Rocker</h3>
@@ -320,7 +322,7 @@ const Projects = () => {
             class={` flex justify-center flex-wrap  p-5 rounded-lg dark:bg-gray-800 ${toggleTabs == 6 ? "bg-dark" : "hidden"}`}   
             id="php" role="tabpanel" aria-labelledby="php">
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-5 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/medada.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Medadaa</h3>
@@ -329,7 +331,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-5 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/3lm.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>3lm Academy</h3>
@@ -338,7 +340,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-5 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/nitg.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>NITG</h3>
@@ -347,7 +349,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-5 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/academy.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Academy </h3>
@@ -356,7 +358,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
-                    <div className='card  mr-5 mt-5 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/B&G.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Bride & Groom </h3>
@@ -365,7 +367,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full z-10">
-                    <div className='card  mr-5 mt-5 p-0  relative group rounded-xl ' >
+                    <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
                             <img  className="rounded-xl" src="../Images/elnady.png"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
                             <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>El-Nady </h3>

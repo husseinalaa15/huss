@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-
-
+import {FiSun} from 'react-icons/fi'
+import {BsFillMoonFill} from 'react-icons/bs'
+import { Mode } from './contextApi/ThemeMode'
 
 const navigation = [
   { name: 'Home', href: '#Home' },
@@ -14,6 +15,8 @@ const navigation = [
     // { name: 'Company', href: '#' },
   ]
 const Navbar = () => {
+  const {lightMode,toggleMode} = useContext(Mode);
+  console.log(lightMode)
   return (
     <Popover>
     <div className="w-full z-10 fixed pt-6 pb-6 px-4 sm:px-6 lg:px-8">
@@ -24,12 +27,25 @@ const Navbar = () => {
               <span className="sr-only">Workflow</span>
               <img
                 alt="Workflow"
-                className="h-12 w-12 bg-primary rounded-3xl p-2 border-2 border-text-secondary"
+                className= {`h-12 w-12 ${lightMode ?  ' light-color  text-text-darkmode' : ' bg-primary text-white'} rounded-3xl p-2 border-2 border-text-secondary `}
                 src="./Images/hussein.png"
               />
             </a>
+            <button  onClick={()=>toggleMode()} className='ml-2'>
+              <span className="sr-only">Workflow</span>
+              {
+                lightMode ? ( 
+                 <BsFillMoonFill className={`h-12 w-12 ${lightMode ?  ' light-color  text-text-darkmode' : ' bg-primary text-white'} rounded-3xl p-2 border-2 border-text-secondary `} /> 
+
+                ) : 
+                (
+                  <FiSun  className={`h-12 w-12 ${lightMode ?  ' light-color  text-text-darkmode' : ' bg-primary text-white'} rounded-3xl p-2 border-2 border-text-secondary `}/>
+
+                )
+              }
+            </button>
             <div className="-mr-2 flex items-center md:hidden">
-              <Popover.Button className="bg-primary rounded-md p-2 inline-flex items-center justify-center border-2 border-text-secondary text-text-secondary hover:text-text-secondary hover:bg-text-secondary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <Popover.Button className={`${lightMode ? " bg-white " : " bg-primary " } rounded-md p-2 inline-flex items-center justify-center border-2 border-text-secondary text-text-secondary hover:text-text-secondary hover:bg-text-secondary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500`}>
                 <span className="sr-only">Open main menu</span>
                 <Bars3Icon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -38,7 +54,7 @@ const Navbar = () => {
         </div>
         <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="font-medium text-gray-500 hover:text-gray-900">
+            <a key={item.name} href={item.href} className="font-medium text-gray-500 hover:text-gray-900 ">
               {item.name}
             </a>
           ))}
@@ -60,19 +76,19 @@ const Navbar = () => {
     >
       <Popover.Panel
         focus
-        className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+        className="fixed h-screen z-[100] top-0 inset-x-0 p-2 transition  transform origin-top-right md:hidden"
       >
-        <div className="rounded-lg shadow-md bg-primary ring-1 ring-black ring-opacity-5 overflow-hidden">
+        <div className={`rounded-lg h-full z-10 shadow-md ${lightMode ? ' bg-white ' : ' bg-primary '}  ring-1 ring-black ring-opacity-5 overflow-hidden`}>
           <div className="px-5 pt-4 flex items-center justify-between">
             <div>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
-                alt=""
+            <img
+                alt="Workflow"
+                className={`h-12 w-12 ${lightMode ?  ' light-color  text-text-darkmode' : ' bg-primary text-white'} rounded-3xl p-2 border-2 border-text-secondary `}
+                src="./Images/hussein.png"
               />
             </div>
             <div className="-mr-2">
-              <Popover.Button className="bg-primary rounded-md p-2 inline-flex items-center justify-center text-text-secondary hover:bg-text-secondary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <Popover.Button className={`${lightMode ? " bg-white " : " bg-primary " }  rounded-md p-2 inline-flex items-center justify-center text-text-secondary hover:bg-text-secondary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500`}>
                 <span className="sr-only">Close main menu</span>
                 <XMarkIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -80,6 +96,8 @@ const Navbar = () => {
           </div>
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navigation.map((item) => (
+              <Popover.Button>
+
               <a
                 key={item.name}
                 href={item.href}
@@ -87,6 +105,7 @@ const Navbar = () => {
               >
                 {item.name}
               </a>
+              </Popover.Button>
             ))}
           </div>
           <a

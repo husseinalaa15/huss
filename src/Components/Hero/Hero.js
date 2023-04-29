@@ -2,12 +2,16 @@
 import { AiFillGithub, AiOutlineFacebook, AiOutlineInstagram, AiOutlineLinkedin, AiOutlineTwitter, AiOutlineWhatsApp } from 'react-icons/ai';
 import  './Hero.css'
 import Navbar from '../Navbar'
+import { useContext } from 'react';
+import { Mode } from '../contextApi/ThemeMode';
 
 export default function Example() {
+  const {lightMode} = useContext(Mode);
+
   return (
       <>
       <Navbar />
-    <div className="relative overflow-hidden height100vh main-color"  id="HeroSection">
+    <div className={`relative overflow-hidden height100vh ${lightMode ?  ' light-color   ':'main-color'}  `}  id="HeroSection">
          
         
 {/* #502124
@@ -60,7 +64,7 @@ Do not hesitate to hire me.
       <div className="lg:absolute  flex justify-center items-center lg:inset-y-0 lg:right-0 lg:w-1/2">
       
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 100 120" width="50%" className="heroSectionSvg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 100 120" width="50%" className="heroSectionSvg " >
           <title>Hussein Alaa</title>
           <defs>
             <clipPath id="maskImage" clipPathUnits="userSpaceOnUse">
@@ -70,7 +74,7 @@ Do not hesitate to hire me.
               <path d="M190 101a50 50 0 01-50 50 50 50 0 01-50-50 50 50 0 0150-50 50 50 0 0150 50z" />
             </clipPath>
           </defs>
-          <g  clip-path="url(#maskImage)" className="svgImages" transform="translate(0 -7)">
+          <g  clip-path="url(#maskImage)" className="svgImages shadow-2xl" transform="translate(0 -7)">
             <image  clip-path="url(#maskBackground)" width="180" height="120" x="70" y="32" href="../bg.jpg" transform="translate(-90 -31)" />
             <image x="0" style={{width:'100%', height:'100%'}} y="0" fill="none" className="husseinImgSvg" href="../hussein.png" />
             {/*  width="120" height="144" */}
