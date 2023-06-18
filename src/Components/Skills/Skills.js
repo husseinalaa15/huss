@@ -11,9 +11,9 @@ const Skills = () => {
         <div className='flex  xs:flex-col md:flex-row  mt-24'>
           
           <div className={`card    xs:my-5 xs:mx-5 md:w-4/12 lg:mx-12 ${lightMode ? ' bg-white' : ' bg-primary'}  `}>
-            <h5 className={`text-2xl ${lightMode ? ' text-text-secondary ' : ' text-text-primary '} border-b-2 border-text-secondary pb-3 mb-5`}>
+            <p className={`text-2xl ${lightMode ? ' text-text-secondary ' : ' text-text-primary '} border-b-2 border-text-secondary pb-3 mb-5`}>
               Front End Skills 
-            </h5>
+            </p>
             <div className='flex flex-wrap justify-center'>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../html.png" className='w-10 pb-1' alt='html'/>
@@ -68,9 +68,9 @@ const Skills = () => {
             </div>
           </div>
           <div className={`card    xs:my-5 xs:mx-5 md:w-4/12 lg:mx-12 ${lightMode ? ' bg-white' : ' bg-primary'}  `}>
-          <h5 className={`text-2xl ${lightMode ? ' text-text-secondary ' : ' text-text-primary '} border-b-2 border-text-secondary pb-3 mb-5`}>
+          <p className={`text-2xl ${lightMode ? ' text-text-secondary ' : ' text-text-primary '} border-b-2 border-text-secondary pb-3 mb-5`}>
               Back End Skills 
-            </h5>
+            </p>
             <div className='flex flex-wrap justify-center'>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../node.png" className='w-10 pb-1'alt='node'/>
@@ -106,9 +106,9 @@ const Skills = () => {
             </div>
           </div>
           <div className={`card    xs:my-5 xs:mx-5 md:w-4/12 lg:mx-12 ${lightMode ? ' bg-white' : ' bg-primary'}  `}>
-          <h5 className={`text-2xl ${lightMode ? ' text-text-secondary ' : ' text-text-primary '} border-b-2 border-text-secondary pb-3 mb-5`}>
+          <p className={`text-2xl ${lightMode ? ' text-text-secondary ' : ' text-text-primary '} border-b-2 border-text-secondary pb-3 mb-5`}>
               Besides 
-            </h5>
+            </p>
             <div className='flex flex-wrap justify-center'>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../git.png" className='w-10 pb-1'alt='git'/>

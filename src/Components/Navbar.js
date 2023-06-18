@@ -26,7 +26,9 @@ const Navbar = () => {
               <span className="sr-only">Workflow</span>
               <img
                 alt="Workflow"
-                className= {`h-12 w-12 ${lightMode ?  ' light-color  text-text-darkmode' : ' bg-primary text-white'} rounded-3xl p-2 border-2 border-text-secondary `}
+                width={"3rem"}
+                height={"3rem"}
+                className= {`${lightMode ?  ' light-color  text-text-darkmode' : ' bg-primary text-white'} rounded-3xl p-2 border-2 border-text-secondary `}
                 src="./Images/hussein.png"
               />
             </a>
@@ -38,7 +40,7 @@ const Navbar = () => {
 
                 ) : 
                 (
-                  <FiSun  className={`h-12 w-12 ${lightMode ?  ' light-color  text-text-darkmode' : ' bg-primary text-white'} rounded-3xl p-2 border-2 border-text-secondary `}/>
+                  <FiSun  className={`h-12 w-12 ${lightMode ?  ' light-color  text-text-darkmode' : ' bg-primary text-text-secondary'} rounded-3xl p-2 border-2 border-text-secondary `}/>
 
                 )
               }
@@ -52,8 +54,8 @@ const Navbar = () => {
           </div>
         </div>
         <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-          {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="font-medium text-gray-500 hover:text-gray-900 ">
+          {navigation.map((item,i) => (
+            <a key={i} href={item.href} className="font-medium text-gray-500 hover:text-gray-900 ">
               {item.name}
             </a>
           ))}
@@ -94,8 +96,8 @@ const Navbar = () => {
             </div>
           </div>
           <div className="px-2 pt-2 pb-3 space-y-1">
-            {navigation.map((item) => (
-              <Popover.Button>
+            {navigation.map((item,i) => (
+              <Popover.Button key={i}>
 
               <a
                 key={item.name}

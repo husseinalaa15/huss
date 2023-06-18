@@ -11,11 +11,11 @@ const Projects = () => {
     <div className={`relative overflow-hidden flex  justify-center text-center min-h-screen flex-col  ${lightMode ? 'light-color' : ' bg-primary'}`}   id="projects">
       <h1 className='text-4xl font-bold tracking-widest text-text-primary mt-10'> Projects </h1>
 
-      <div class="  mb-4 z-10">
-        <ul class="flex flex-wrap -mb-px justify-center mt-9   " id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
-            <li class={`mr-2 `} role="presentation">
+      <div className="  mb-4 z-10">
+        <ul className="flex flex-wrap -mb-px justify-center mt-9   " id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+            <li className={`mr-2 `} role="presentation">
                 <button  onClick={()=>{setToggleTabs(0)}} 
-                class={
+                className={
                     `
                     inline-block 
                     text-gray-500 hover:text-text-secondary hover:border-text-secondary 
@@ -32,9 +32,9 @@ const Projects = () => {
                         Mern
                     </button>
             </li>
-            <li class={`mr-2 `} role="presentation">
+            <li className={`mr-2 `} role="presentation">
                 <button  onClick={()=>{setToggleTabs(1)}} 
-                    class={
+                    className={
                         `
                         inline-block 
                         text-gray-500 hover:text-text-secondary hover:border-text-secondary 
@@ -51,9 +51,9 @@ const Projects = () => {
                 React
                 </button>
             </li>
-            <li class={`mr-2 `} role="presentation">
+            <li className={`mr-2 `} role="presentation">
                 <button  onClick={()=>{setToggleTabs(2)}} 
-                    class={
+                    className={
                         `
                         inline-block 
                         text-gray-500 hover:text-text-secondary hover:border-text-secondary 
@@ -66,13 +66,13 @@ const Projects = () => {
                         ${toggleTabs == 2 ? "  text-text-secondary tracking-widest font-bold border-text-secondary hover:text-blue-600" : ""}
                         `
                         } 
-                    id="nodejs" data-tabs-target="#nodejs" type="button" role="tab" aria-controls="nodejs" aria-selected="nodejs">
+                    id="nodejs" data-tabs-target="#nodejs" type="button" role="tab" aria-controls="nodejs" aria-selected="false">
                 Node.js
                 </button>
             </li>
-            <li class="mr-2" role="presentation">
+            <li className="mr-2" role="presentation">
                 <button onClick={()=>{setToggleTabs(3)}} 
-                    class={
+                    className={
                         `
                         inline-block 
                         text-gray-500 hover:text-text-secondary hover:border-text-secondary 
@@ -89,9 +89,9 @@ const Projects = () => {
                     Angular
                 </button>
             </li>
-            <li class="mr-2" role="presentation">
+            <li className="mr-2" role="presentation">
                 <button  onClick={()=>{setToggleTabs(4)}}
-                   class={
+                   className={
                     `
                     inline-block 
                     text-gray-500 hover:text-text-secondary hover:border-text-secondary 
@@ -108,9 +108,9 @@ const Projects = () => {
                     JavaScript
                 </button>
             </li>
-            <li class="mr-2" role="presentation">
+            <li className="mr-2" role="presentation">
                 <button  onClick={()=>{setToggleTabs(5)}}
-                    class={
+                    className={
                         `
                         inline-block 
                         text-gray-500 hover:text-text-secondary hover:border-text-secondary 
@@ -129,7 +129,7 @@ const Projects = () => {
             </li>
             <li role="presentation">
                 <button  onClick={()=>{setToggleTabs(6)}}
-                class={
+                className={
                     `
                     inline-block 
                     text-gray-500 hover:text-text-secondary hover:border-text-secondary 
@@ -150,13 +150,13 @@ const Projects = () => {
     </div>
     <div className='mt-5 lg:p-[50px]' id="myTabContent">
             <div 
-            class={` flex justify-center   p-4 rounded-lg  flex-wrap ${toggleTabs == 0 ? "bg-dark" : "hidden"}`}   
-            id="mern" role="tabpanel" aria-labelledby="mern">
+            className={` flex justify-center   p-4 rounded-lg  flex-wrap ${toggleTabs == 0 ? "bg-dark" : "hidden"}`}   
+            id="merntab" role="tabpanel" aria-labelledby="mern">
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/mern.png"/>
+                            <img  className="rounded-xl" src="../Images/mern.jpg" alt="mern"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>E-Bookalypse</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>E-Bookalypse</p>
                             <a target="_blank" href="https://ebookalypse.herokuapp.com/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
@@ -167,40 +167,40 @@ const Projects = () => {
             </div>
 
             <div 
-            class={` flex justify-center flex-wrap  p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 1 ? "bg-dark" : "hidden"}`}   
-            id="react" role="tabpanel" aria-labelledby="react">
+            className={` flex justify-center flex-wrap  p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 1 ? "bg-dark" : "hidden"}`}   
+            id="reacttab" role="tabpanel" aria-labelledby="react">
                   <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/mern.png"/>
+                            <img  className="rounded-xl" src="../Images/mern.jpg" alt="mern"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>E-Bookalypse</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>E-Bookalypse</p>
                             <a target="_blank" href="https://ebookalypse.herokuapp.com/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/moviesclub.png"/>
+                            <img  className="rounded-xl" src="../Images/moviesclub.jpg" alt="moviesclub"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Movies Club</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Movies Club</p>
                             <a target="_blank" href="https://husseinalaa15.github.io/MoviesClub/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/portfolio22.png"/>
+                            <img  className="rounded-xl" src="../Images/portfolio22.png" alt="portfolio22"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Portfolio </h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Portfolio </p>
                             <a target="_blank" href="https://husseinalaa15.github.io/portfolio22/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full z-20">
                     <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/todoreact.png"/>
+                            <img  className="rounded-xl" src="../Images/todoreact.jpg" alt="todoreact"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Todos</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Todos</p>
                             <a target="_blank" href="https://husseinalaa15.github.io/todolist-react/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
@@ -208,22 +208,22 @@ const Projects = () => {
               
             </div>
             <div 
-            class={` flex justify-center flex-wrap  p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 2 ? "bg-dark" : "hidden"}`}   
-            id="nodejs" role="tabpanel" aria-labelledby="nodejs">
+            className={` flex justify-center flex-wrap  p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 2 ? "bg-dark" : "hidden"}`}   
+            id="nodejstab" role="tabpanel" aria-labelledby="nodejs">
                   <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/mern.png"/>
+                            <img  className="rounded-xl" src="../Images/mern.jpg" alt="mern"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>E-Bookalypse</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>E-Bookalypse</p>
                             <a target="_blank" href="https://ebookalypse.herokuapp.com/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/chatapp.png"/>
+                            <img  className="rounded-xl" src="../Images/chatapp.jpg" alt="chatapp"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Chat App</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Chat App</p>
                             <a target="_blank" href="https://chatapp-iti.herokuapp.com/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
@@ -232,13 +232,13 @@ const Projects = () => {
               
             </div>
             <div 
-            class={` flex justify-center  p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 3 ? "bg-dark" : "hidden"}`}   
-            id="angular" role="tabpanel" aria-labelledby="angular">
+            className={` flex justify-center  p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 3 ? "bg-dark" : "hidden"}`}   
+            id="angulartab" role="tabpanel" aria-labelledby="angular">
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-2 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/ourblog.png"/>
+                            <img  className="rounded-xl" src="../Images/ourblog.jpg" alt="ourblog"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>E-Bookalypse</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>E-Bookalypse</p>
                             <a target="_blank" href="https://husseinalaa15.github.io/ourBlog/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
@@ -246,40 +246,40 @@ const Projects = () => {
              
             </div>
             <div 
-            class={` flex justify-center  flex-wrap p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 4 ? "bg-dark" : "hidden"}`}   
-            id="js" role="tabpanel" aria-labelledby="js">
+            className={` flex justify-center  flex-wrap p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 4 ? "bg-dark" : "hidden"}`}   
+            id="jstab" role="tabpanel" aria-labelledby="js">
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/hmdb.png"/>
+                            <img  className="rounded-xl" src="../Images/hmdb.jpg" alt="hmdb"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>HMDB</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>HMDB</p>
                             <a target="_blank" href="https://husseinalaa15.github.io/HMDB/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/todos.png"/>
+                            <img  className="rounded-xl" src="../Images/todos.jpg" lat="todos"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Todos</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Todos</p>
                             <a target="_blank" href="https://husseinalaa15.github.io/todos/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/weather.png"/>
+                            <img  className="rounded-xl" src="../Images/weather.jpg" alt='weather'/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Weather App</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Weather App</p>
                             <a target="_blank" href="https://husseinalaa15.github.io/Weather-App/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/github.png"/>
+                            <img  className="rounded-xl" src="../Images/github.jpg" alt='github'/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Github Users</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Github Users</p>
                             <a target="_blank" href="https://husseinalaa15.github.io/Github-users/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
@@ -287,31 +287,31 @@ const Projects = () => {
                
             </div>
             <div 
-            class={` flex justify-center flex-wrap p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 5 ? "bg-dark" : "hidden"}`}   
-            id="htmlcss" role="tabpanel" aria-labelledby="htmlcss">
+            className={` flex justify-center flex-wrap p-4 rounded-lg dark:bg-gray-800 ${toggleTabs == 5 ? "bg-dark" : "hidden"}`}   
+            id="htmlcsstab" role="tabpanel" aria-labelledby="htmlcss">
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/luxestate.png"/>
+                            <img  className="rounded-xl" src="../Images/luxestate.jpg" alt='luxestate'/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Luxestate</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Luxestate</p>
                             <a target="_blank" href="https://husseinalaa15.github.io/luxestate/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/htmlcss.png"/>
+                            <img  className="rounded-xl" src="../Images/htmlcss.jpg" alt="htmlcss"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Untitled</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Untitled</p>
                             <a target="_blank" href="https://husseinalaa15.github.io/Html-Css/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full z-10">
                     <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/responsivehtmlcss.png"/>
+                            <img  className="rounded-xl" src="../Images/responsivehtmlcss.jpg" alt='responsivehtmlcss'/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Rocker</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Rocker</p>
                             <a target="_blank" href="https://husseinalaa15.github.io/html-css-Responsive/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
@@ -319,58 +319,58 @@ const Projects = () => {
               
             </div>
             <div 
-            class={` flex justify-center flex-wrap  p-5 rounded-lg dark:bg-gray-800 ${toggleTabs == 6 ? "bg-dark" : "hidden"}`}   
-            id="php" role="tabpanel" aria-labelledby="php">
+            className={` flex justify-center flex-wrap  p-5 rounded-lg dark:bg-gray-800 ${toggleTabs == 6 ? "bg-dark" : "hidden"}`}   
+            id="phptab" role="tabpanel" aria-labelledby="php">
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/medada.png"/>
+                            <img  className="rounded-xl" src="../Images/medada.jpg" alt="medada"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Medadaa</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Medadaa</p>
                             <a target="_blank" href="https://medadaa.com/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/3lm.png"/>
+                            <img  className="rounded-xl" src="../Images/3lm.jpg" alt="3lm"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>3lm Academy</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>3lm Academy</p>
                             <a target="_blank" href="https://3lm.academy/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/nitg.png"/>
+                            <img  className="rounded-xl" src="../Images/nitg.jpg" alt="nitg"/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>NITG</h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>NITG</p>
                             <a target="_blank" href="https://nitg-eg.com/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/academy.png"/>
+                            <img  className="rounded-xl" src="../Images/academy.jpg" alt='academy'/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Academy </h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Academy </p>
                             <a target="_blank" href="https://academy.nitg-eg.com/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full">
                     <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/B&G.png"/>
+                            <img  className="rounded-xl" src="../Images/B&G.jpg" alt='bg'/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Bride & Groom </h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>Bride & Groom </p>
                             <a target="_blank" href="https://husseinalaa15.github.io/Bride-Groom/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/3 md:w-1/2 xs:w-full z-10">
                     <div className='card  lg:mr-5 mt-5 p-0  relative group rounded-xl ' >
-                            <img  className="rounded-xl" src="../Images/elnady.png"/>
+                            <img  className="rounded-xl" src="../Images/elnady.jpg" alt='elnady'/>
                         <div className='absolute rounded-xl top-0 left-0  opacity-0 flex flex-col group-hover:opacity-100  transition-all justify-center items-center bottom-0 right-0 h-full bg-opacity-60 bg-primary'>
-                            <h3 className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>El-Nady </h3>
+                            <p className='text-text-primary font-bold text-3xl border-b-2 border-text-primary pb-5 border-'>El-Nady </p>
                             <a target="_blank" href="https://husseinalaa15.github.io/el-nady/" className='py-4 rounded-md px-20 bg-transparent text-text-primary border-2 border-text-primary text-white font-medium tracking-widest hover:bg-text-secondary hover:border-text-secondary transition-all m-5 text-center'>View</a>
                         </div>
                     </div>

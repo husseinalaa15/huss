@@ -13,7 +13,7 @@ function App() {
       <div className='overflow-hidden relative'>
       {/* <Navbar /> */}
       
-        <div class="pattern-dots pattern-blue-500 pattern-bg-white 
+        <div className="pattern-dots pattern-blue-500 pattern-bg-white 
         pattern-size-6 pattern-opacity-20"></div>
         
                 <div className="absolute  top-0 right-4 w-72 h-72  bg-yellow-300  z-10 rounded-full mix-blend-overlay filter blur-xl opacity-40 animation-delay-2000 animate-blob ">
