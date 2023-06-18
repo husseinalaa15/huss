@@ -17,51 +17,51 @@ const Skills = () => {
             <div className='flex flex-wrap justify-center'>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../html.png" className='w-10 pb-1' alt='html'/>
-                <h3 className='text-sm font-bold text-text-primary'>HTML</h3>
+                <p className='text-sm font-bold text-text-primary'>HTML</p>
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../css.png" className='w-10 pb-1' alt='CSS'/>
-                <h3 className='text-sm font-bold text-text-primary'>CSS</h3>
+                <p className='text-sm font-bold text-text-primary'>CSS</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../js.png" className='w-10 pb-1' alt='Javascript'/>
-                <h3 className='text-sm font-bold text-text-primary'>JavaScript</h3>
+                <p className='text-sm font-bold text-text-primary'>JavaScript</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../bs.png" className='w-10 pb-1' alt='bootstrap'/>
-                <h3 className='text-sm font-bold text-text-primary'>Bootstrap</h3>
+                <p className='text-sm font-bold text-text-primary'>Bootstrap</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../sass.png" className='w-10 pb-1'alt='sass'/>
-                <h3 className='text-sm font-bold text-text-primary'>Sass</h3>
+                <p className='text-sm font-bold text-text-primary'>Sass</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../react.png" className='w-10 pb-1'alt='react'/>
-                <h3 className='text-sm font-bold text-text-primary'>React</h3>
+                <p className='text-sm font-bold text-text-primary'>React</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../angular.png" className='w-10 pb-1'alt='angular'/>
-                <h3 className='text-sm font-bold text-text-primary'>Angular</h3>
+                <p className='text-sm font-bold text-text-primary'>Angular</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../react.png" className='w-10 pb-1'alt='react Native'/>
-                <h3 className='text-sm font-bold text-text-primary'>React Native</h3>
+                <p className='text-sm font-bold text-text-primary'>React Native</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../jasmine.svg" className='w-10 pb-1' alt='jasmine'/>
-                <h3 className='text-sm font-bold text-text-primary'>Jasmine</h3>
+                <p className='text-sm font-bold text-text-primary'>Jasmine</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../jest.png" className='w-10 pb-1'alt='jest'/>
-                <h3 className='text-sm font-bold text-text-primary'>Jest</h3>
+                <p className='text-sm font-bold text-text-primary'>Jest</p>
 
               </div>
               
@@ -74,31 +74,31 @@ const Skills = () => {
             <div className='flex flex-wrap justify-center'>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../node.png" className='w-10 pb-1'alt='node'/>
-                <h3 className='text-sm font-bold text-text-primary'>Node JS</h3>
+                <p className='text-sm font-bold text-text-primary'>Node JS</p>
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../express.png" className='w-10 pb-1'alt='express'/>
-                <h3 className='text-sm font-bold text-text-primary'>Express</h3>
+                <p className='text-sm font-bold text-text-primary'>Express</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../mongodb.png" className='w-10 pb-1'alt='mongodb'/>
-                <h3 className='text-sm font-bold text-text-primary'>Mongodb</h3>
+                <p className='text-sm font-bold text-text-primary'>Mongodb</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../php.png" className='w-10 pb-1'alt='php'/>
-                <h3 className='text-sm font-bold text-text-primary'>php</h3>
+                <p className='text-sm font-bold text-text-primary'>php</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../mysql.png" className='w-10 pb-1'alt='mysql'/>
-                <h3 className='text-sm font-bold text-text-primary'>Mysql</h3>
+                <p className='text-sm font-bold text-text-primary'>Mysql</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../graphql.png" className='w-10 pb-1'alt='graphql'/>
-                <h3 className='text-sm font-bold text-text-primary'>Graphql</h3>
+                <p className='text-sm font-bold text-text-primary'>Graphql</p>
 
               </div>
 
@@ -112,31 +112,31 @@ const Skills = () => {
             <div className='flex flex-wrap justify-center'>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../git.png" className='w-10 pb-1'alt='git'/>
-                <h3 className='text-sm font-bold text-text-primary'>Git</h3>
+                <p className='text-sm font-bold text-text-primary'>Git</p>
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../heroku.png" className='w-10 pb-1'alt='heroku'/>
-                <h3 className='text-sm font-bold text-text-primary'>Heroku</h3>
+                <p className='text-sm font-bold text-text-primary'>Heroku</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../moodle.png" className='w-10 pb-1'alt='moodle'/>
-                <h3 className='text-sm font-bold text-text-primary'>Moodle</h3>
+                <p className='text-sm font-bold text-text-primary'>Moodle</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../wp.png" className='w-10 pb-1'alt='wordpress'/>
-                <h3 className='text-sm font-bold text-text-primary'>Wordpress</h3>
+                <p className='text-sm font-bold text-text-primary'>Wordpress</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../figma.png" className='w-10 pb-1'alt='figma'/>
-                <h3 className='text-sm font-bold text-text-primary'>Figma</h3>
+                <p className='text-sm font-bold text-text-primary'>Figma</p>
 
               </div>
               <div className='w-3/12 flex flex-col items-center justify-center mt-3'>
                 <img src="../ps.png" className='w-10 pb-1'alt='Photoshop'/>
-                <h3 className='text-sm font-bold text-text-primary'>Photoshop</h3>
+                <p className='text-sm font-bold text-text-primary'>Photoshop</p>
 
               </div>
            
