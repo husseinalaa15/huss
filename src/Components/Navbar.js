@@ -26,9 +26,9 @@ const Navbar = () => {
               <span className="sr-only">Workflow</span>
               <img
                 alt="Workflow"
-                width={"3rem"}
-                height={"3rem"}
-                className= {`${lightMode ?  ' light-color  text-text-darkmode' : ' bg-primary text-white'} rounded-3xl p-2 border-2 border-text-secondary `}
+                width={"48px"}
+                height={"48px"}
+                className= {`${lightMode ?  ' light-color  text-text-darkmode' : ' bg-primary text-white'} rounded-3xl py-2 px-3 border-2 border-text-secondary `}
                 src="./Images/hussein.png"
               />
             </a>
