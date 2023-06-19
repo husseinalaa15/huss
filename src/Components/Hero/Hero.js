@@ -19,7 +19,7 @@ export default function Example() {
   #6B4B24
 */}
       <div className="max-w-7xl h-full flex items-center overflow-hidden mx-auto" id="Home">
-        <div className="relative   sm:pb-16  lg:max-w-2xl ">
+        <div className="relative  w-full  sm:pb-16  lg:max-w-2xl ">
       
 
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">

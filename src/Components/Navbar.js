@@ -55,7 +55,7 @@ const Navbar = () => {
         </div>
         <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
           {navigation.map((item,i) => (
-            <a key={i} href={item.href} className="font-medium text-gray-500 hover:text-gray-900 ">
+            <a key={i} href={item.href} className="font-medium text-gray-500 hover:text-text-secondary">
               {item.name}
             </a>
           ))}
