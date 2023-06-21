@@ -9,7 +9,7 @@ const Projects = () => {
   return (
 
     <div className={`relative overflow-hidden flex  justify-center text-center min-h-screen flex-col  ${lightMode ? 'light-color' : ' bg-primary'}`}   id="projects">
-      <h1 className='text-4xl font-bold tracking-widest text-text-primary mt-10'> Projects </h1>
+      <h2 className='text-4xl font-bold tracking-widest text-text-primary mt-10'> Projects </h2>
 
       <div className="  mb-4 z-10">
         <ul className="flex flex-wrap -mb-px justify-center mt-9   " id="myTab" data-tabs-toggle="#myTabContent" role="tablist">

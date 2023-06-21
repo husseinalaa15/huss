@@ -24,10 +24,10 @@ export default function Example() {
 
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
-              <h1 className="text-4xl tracking-tight font-bold text-gray-900 sm:text-5xl md:text-6xl">
+              <div className="text-4xl tracking-tight font-bold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block text-5xl  xl:inline text-text-primary">Hello I'm <br></br></span>{' '}
-                <span className="block text-text-secondary xl:inline  ">Hussein Alaa</span>
-              </h1>
+                <h1 className="block text-text-secondary xl:inline  ">Hussein Alaa</h1>
+              </div>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
               I am a Frontend Web Developer , I have Industry experience in building web applications and websites, I had worked on many different E-Commerce projects as well as fintech applications.
 I have a great passion about web development, which reflects on my commitment and quality.

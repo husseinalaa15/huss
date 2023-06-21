@@ -7,7 +7,7 @@ const Skills = () => {
   return (
 
     <div className={`relative overflow-hidden flex  justify-center text-center min-h-screen  flex-col ${lightMode ? 'bg-secondaryLight' : 'bg-secondary'}  `} id="skills">
-      <h1 className='text-4xl font-bold tracking-widest xs:mt-20 md:mt-10 text-text-primary'> Skills </h1>
+      <h2 className='text-4xl font-bold tracking-widest xs:mt-20 md:mt-10 text-text-primary'> Skills </h2>
         <div className='flex  xs:flex-col md:flex-row  flex-wrap  mt-24 pb-24'>
           <div className= 'sm:w-12/12 md:w-1/2 lg:w-6/12 xl:w-4/12 mt-5'>
             <div className={`card    xs:my-5 xs:mx-5 h-full  lg:mx-12 ${lightMode ? ' bg-white' : ' bg-primary'}  `}>
